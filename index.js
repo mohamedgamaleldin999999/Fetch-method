@@ -3,7 +3,7 @@ let url = 'http://jsonplaceholder.typicode.com/comments?postId=42';
 fetch(url)
 .then(response => response.json() )
 .then(data => {
-  let str = JSON.stringfy(data, null, '\t');
+  let str = JSON.stringify(data, null, '\t');
   document.querySelector('#output pre').textContent = str;
 })
 .catch(err => {
